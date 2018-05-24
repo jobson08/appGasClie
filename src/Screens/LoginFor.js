@@ -9,7 +9,8 @@ import {
 } from 'react-native';
 
 import Colors from '../Styles/Colors';
-import ButtonG from '../Components/ButtonG';
+import ButtonG from '../Components/ButtonG'
+
 
 export default class LoginFor extends Component {
   buttonEntar() {
@@ -48,6 +49,8 @@ export default class LoginFor extends Component {
         background={Colors.BtnVerde}
         handleOnPress={this.buttonEntar}
       />
+
+
     </View>
 </View>
     );

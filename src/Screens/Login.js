@@ -9,6 +9,7 @@ import {
 
 import Colors from '../Styles/Colors';
 import ButtonG from '../Components/ButtonG';
+import ButtonNext from '../Components/ButtonNext';
 
 export default class Login extends Component {
   buttonEntar() {
@@ -68,8 +69,11 @@ alert('entar com Gmail');
            background={Colors.BtnVermelho}
            handleOnPress={this.buttonGmail}
        />
-
-
+       <View>
+          <ButtonNext
+          
+          />
+       </View>
     </View>
 </View>
     );
@@ -133,5 +137,7 @@ color: '#ffffff',
 fontSize: 15,
 fontWeight: 'bold',
 },
+
+
 
 });
