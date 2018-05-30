@@ -10,10 +10,12 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class ButtonNext extends Component {
   render() {
+    const {handleNextOnPress } = this.props;
     return (
-      <TouchableOpacity style={styles.container}>
+      <TouchableOpacity style={styles.container}
+      onPress={handleNextOnPress}>
         <Icon
-          name="angle-right"
+          name="arrow-circle-right"
           size={50}
           color={Colors.Branco}
           style={styles.icon}
@@ -22,6 +24,10 @@ export default class ButtonNext extends Component {
     );
   }
 }
+
+ButtonNext.PropTypes={
+  handleNextOnPress: PropTypes.func,
+};
 
 const styles = StyleSheet.create({
 container: {

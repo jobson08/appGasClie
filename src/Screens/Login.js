@@ -21,6 +21,10 @@ alert('entar com Facebook');
 buttonGmail() {
 alert('entar com Gmail');
 }
+handleNexbtn(){
+  alert('Cadastro');
+}
+
   render() {
     return (
   <View style={styles.container}>
@@ -69,9 +73,11 @@ alert('entar com Gmail');
            background={Colors.BtnVermelho}
            handleOnPress={this.buttonGmail}
        />
-       <View>
+
+       <View style={styles.nextBtn}>
+         <Text style={styles.TextnextBtn}>fassa seu registo </Text>
           <ButtonNext
-          
+             handleNextOnPress={this.handleNexbtn}
           />
        </View>
     </View>
@@ -134,10 +140,21 @@ alignItems: 'center'
 
 buttonTextEsq: {
 color: '#ffffff',
-fontSize: 15,
+fontSize:20,
 fontWeight: 'bold',
 },
 
+nextBtn:{
+  alignItems: 'flex-end',
+  right: 20,
+  bottom: 0,
+},
+
+TextnextBtn:{
+  color: '#fff',
+  fontSize: 20,
+  fontWeight: 'bold',
+}
 
 
 });
