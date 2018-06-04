@@ -9,7 +9,7 @@ import {
 
 import Colors from '../Styles/Colors';
 //import ButtonG from '../Components/ButtonG';
-import ButtonNext from '../Components/ButtonNext';
+//import ButtonNext from '../Components/ButtonNext';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 export default class Login extends Component {
@@ -65,7 +65,8 @@ handleNexbtn(){
 
        <View style={styles.nextBtn}>
         <Text style={styles.TextnextBtn}>fassa seu registo </Text>
-         <TouchableOpacity>
+         <TouchableOpacity
+         onPress={()=> this.props.navigation.navigate('Home')}>
          <FontAwesome
              name="arrow-circle-right"
              size={55}
@@ -145,6 +146,8 @@ button: {
   justifyContent: 'center',
   alignItems: 'center',
   borderRadius: 20,
+  borderWidth: 1,
+  borderColor: Colors.Branco,
 },
 
 buttonText: {
@@ -161,6 +164,8 @@ buttonfacebook: {
   justifyContent: 'center',
   alignItems: 'center',
   borderRadius: 20,
+  borderWidth: 1,
+  borderColor: Colors.Branco,
 },
 
 buttonGmail: {
@@ -171,6 +176,8 @@ buttonGmail: {
   justifyContent: 'center',
   alignItems: 'center',
   borderRadius: 20,
+  borderWidth: 1,
+  borderColor: Colors.Branco,
 },
 nextBtn:{
   alignItems: 'flex-end',
