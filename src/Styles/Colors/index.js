@@ -5,5 +5,5 @@ export default{
   BtnAzul: '#6200ee',
   BtnVermelho: '#B00020',
   BtnVerde: '#00C853',
-  btnFacebook: '#3b5998',
+  btnFacebook: '#0091EA',
 }

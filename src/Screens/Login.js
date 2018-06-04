@@ -8,19 +8,11 @@ import {
 } from 'react-native';
 
 import Colors from '../Styles/Colors';
-import ButtonG from '../Components/ButtonG';
+//import ButtonG from '../Components/ButtonG';
 import ButtonNext from '../Components/ButtonNext';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 export default class Login extends Component {
-  buttonEntar() {
-  alert('entar com email');
-}
-buttonFacebook() {
-alert('entar com Facebook');
-}
-buttonGmail() {
-alert('entar com Gmail');
-}
 handleNexbtn(){
   alert('Cadastro');
 }
@@ -49,36 +41,37 @@ handleNexbtn(){
 
       <TouchableOpacity
           style={styles.buttonEsq}
-          onPress={this.btnEsqSenha}>
+        onPress={()=> this.props.navigation.navigate('Home')}>
           <Text style={styles.buttonTextEsq}> Esqueceu sua Senha ? </Text>
       </TouchableOpacity>
 
-      <ButtonG
-        text="Entrar"
-        textColor={Colors.Branco}
-        background={Colors.BtnVerde}
-        handleOnPress={this.buttonEntar}
-      />
+      <TouchableOpacity
+              style={styles.button}
+              onPress={()=> this.props.navigation.navigate('Home')}>
+              <Text style={styles.buttonText}> Entrar </Text>
+            </TouchableOpacity>
 
-      <ButtonG
-           text="Facebook"
-           textColor={Colors.Branco}
-           background={Colors.btnFacebook}
-           handleOnPress={this.buttonFacebook}
-       />
+            <TouchableOpacity
+               style={styles.buttonfacebook}
+                   onPress={this.onPress}>
+                      <Text style={styles.buttonText}> Facebook </Text>
+            </TouchableOpacity>
 
-       <ButtonG
-           text="Gmail"
-           textColor={Colors.Branco}
-           background={Colors.BtnVermelho}
-           handleOnPress={this.buttonGmail}
-       />
+            <TouchableOpacity
+               style={styles.buttonGmail}
+                 onPress={this.onPress}>
+                 <Text style={styles.buttonText}> Gmail </Text>
+            </TouchableOpacity>
 
        <View style={styles.nextBtn}>
-         <Text style={styles.TextnextBtn}>fassa seu registo </Text>
-          <ButtonNext
-             handleNextOnPress={this.handleNexbtn}
-          />
+        <Text style={styles.TextnextBtn}>fassa seu registo </Text>
+         <TouchableOpacity>
+         <FontAwesome
+             name="arrow-circle-right"
+             size={55}
+             color="rgba(255,255,255,0.6)"
+             style={styles.icon} />
+        </TouchableOpacity>
        </View>
     </View>
 </View>
@@ -144,10 +137,45 @@ fontSize:20,
 fontWeight: 'bold',
 },
 
+button: {
+  height: 45,
+  backgroundColor: Colors.BtnVerde,
+  alignSelf: 'stretch',
+  marginTop: 10,
+  justifyContent: 'center',
+  alignItems: 'center',
+  borderRadius: 20,
+},
+
+buttonText: {
+  color: Colors.Branco,
+  fontSize: 25,
+  fontWeight: 'bold',
+},
+
+buttonfacebook: {
+  height: 45,
+  backgroundColor: Colors.btnFacebook,
+  alignSelf: 'stretch',
+  marginTop: 10,
+  justifyContent: 'center',
+  alignItems: 'center',
+  borderRadius: 20,
+},
+
+buttonGmail: {
+  height: 45,
+  backgroundColor: '#F44336',
+  alignSelf: 'stretch',
+  marginTop: 10,
+  justifyContent: 'center',
+  alignItems: 'center',
+  borderRadius: 20,
+},
 nextBtn:{
   alignItems: 'flex-end',
-  right: 20,
-  bottom: 0,
+  right: 10,
+
 },
 
 TextnextBtn:{
@@ -155,6 +183,4 @@ TextnextBtn:{
   fontSize: 20,
   fontWeight: 'bold',
 }
-
-
 });
