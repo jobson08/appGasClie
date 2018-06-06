@@ -6,4 +6,6 @@ export default{
   BtnVermelho: '#B00020',
   BtnVerde: '#00C853',
   btnFacebook: '#0091EA',
+  ColorStatubar: '#3700B3',
+  ColorHeader: '#6200EE',
 }

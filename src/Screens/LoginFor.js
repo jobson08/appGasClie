@@ -6,10 +6,13 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
+  StatusBar
 } from 'react-native';
 
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+//import { Container, Content, Header, Left, Right, Icon } from 'native-base';
+
 import Colors from '../Styles/Colors';
-import ButtonG from '../Components/ButtonG'
 
 
 export default class LoginFor extends Component {
@@ -19,7 +22,10 @@ export default class LoginFor extends Component {
   render() {
     return (
   <View style={styles.container}>
-
+  <StatusBar
+  backgroundColor={Colors.ColorStatubar}
+  animated={true}
+  />
     <View style ={styles.quadroLogin}>
 
         <View style={styles.topoPainel}>
@@ -43,13 +49,11 @@ export default class LoginFor extends Component {
           <Text style={styles.buttonTextEsq}> Esqueceu sua Senha ? </Text>
       </TouchableOpacity>
 
-      <ButtonG
-        text="Entrar"
-        textColor={Colors.Branco}
-        background={Colors.BtnVerde}
-        handleOnPress={this.buttonEntar}
-      />
-
+      <TouchableOpacity
+              style={styles.button}
+              onPress={()=> this.props.navigation.navigate('Home')}>
+              <Text style={styles.buttonText}> Salvar</Text>
+      </TouchableOpacity>
 
     </View>
 </View>
@@ -62,6 +66,9 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.AzulPrimary,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  headerStyle: {
+    borderBottomColor: '#757575',
   },
 
 quadroLogin: {
@@ -113,5 +120,22 @@ buttonTextEsq: {
 color: '#ffffff',
 fontSize: 15,
 fontWeight: 'bold',
+},
+button: {
+  height: 45,
+  backgroundColor: Colors.BtnVerde,
+  alignSelf: 'stretch',
+  marginTop: 10,
+  justifyContent: 'center',
+  alignItems: 'center',
+  borderRadius: 20,
+  borderWidth: 1,
+  borderColor: Colors.Branco,
+},
+
+buttonText: {
+  color: Colors.Branco,
+  fontSize: 25,
+  fontWeight: 'bold',
 },
 });

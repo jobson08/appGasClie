@@ -5,23 +5,22 @@ import {
   View,
   Text,
   StyleSheet,
+  StatusBar
 } from 'react-native';
+import Colors from '../Styles/Colors';
+//import FontAwesome from 'react-native-vector-icons/FontAwesome';
+///import { Container, Content, Header, Left, Right, Icon } from 'native-base';
 
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import { Container, Content, Header, Left, Right, Icon } from 'native-base';
 export default class Pedidos extends Component {
   render() {
     return (
-      <Container>
-        <Header style ={styles.headerStyle}>
-          <Right>
-            <FontAwesome name="angle-left" onPress={()=> this.props.navigation.navigate('Home')}
-            style={{color: 'white', fontSize:40, marginRight: 375}}
-           />
-          </Right>
-        </Header>
-
-      </Container>
+      <View>
+      <StatusBar
+      backgroundColor={Colors.ColorStatubar}
+      animated={true}
+      />
+          <Text>Pedidos</Text>
+      </View>
     );
   }
 }
@@ -31,7 +30,4 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 
-  headerStyle: {
-    borderBottomColor: '#757575',
-  }
 });

@@ -1,5 +1,3 @@
-/* @flow weak */
-
 /* @flow */
 
 import React, { Component } from 'react';
@@ -9,13 +7,11 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import {Icon, Button, container, Header, Content, Left}
-
-export default class MenuScreen extends Component {
+export default class TelaInicial extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>m the MenuScreen component</Text>
+        <Text>m the MyComponent component</Text>
       </View>
     );
   }

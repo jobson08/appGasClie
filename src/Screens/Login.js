@@ -5,11 +5,11 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
+  StatusBar
 } from 'react-native';
 
 import Colors from '../Styles/Colors';
-//import ButtonG from '../Components/ButtonG';
-//import ButtonNext from '../Components/ButtonNext';
+
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 export default class Login extends Component {
@@ -20,6 +20,10 @@ handleNexbtn(){
   render() {
     return (
   <View style={styles.container}>
+<StatusBar
+backgroundColor={Colors.ColorStatubar}
+animated={true}
+/>
 
     <View style ={styles.quadroLogin}>
 
@@ -49,24 +53,34 @@ handleNexbtn(){
               style={styles.button}
               onPress={()=> this.props.navigation.navigate('Home')}>
               <Text style={styles.buttonText}> Entrar </Text>
-            </TouchableOpacity>
+      </TouchableOpacity>
 
             <TouchableOpacity
                style={styles.buttonfacebook}
                    onPress={this.onPress}>
+                   <FontAwesome
+                      name="facebook-square"
+                      size={30}
+                      color="#fff">
+                   </FontAwesome>
                       <Text style={styles.buttonText}> Facebook </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
                style={styles.buttonGmail}
                  onPress={this.onPress}>
+                 <FontAwesome
+                    name="google"
+                    size={30}
+                    color="#fff">
+                 </FontAwesome>
                  <Text style={styles.buttonText}> Gmail </Text>
             </TouchableOpacity>
 
        <View style={styles.nextBtn}>
         <Text style={styles.TextnextBtn}>fassa seu registo </Text>
          <TouchableOpacity
-         onPress={()=> this.props.navigation.navigate('Home')}>
+         onPress={()=> this.props.navigation.navigate('LoginFor')}>
          <FontAwesome
              name="arrow-circle-right"
              size={55}
@@ -148,6 +162,7 @@ button: {
   borderRadius: 20,
   borderWidth: 1,
   borderColor: Colors.Branco,
+  flexDirection: 'row',
 },
 
 buttonText: {
@@ -166,6 +181,7 @@ buttonfacebook: {
   borderRadius: 20,
   borderWidth: 1,
   borderColor: Colors.Branco,
+  flexDirection: 'row',
 },
 
 buttonGmail: {
@@ -178,6 +194,7 @@ buttonGmail: {
   borderRadius: 20,
   borderWidth: 1,
   borderColor: Colors.Branco,
+  flexDirection: 'row',
 },
 nextBtn:{
   alignItems: 'flex-end',

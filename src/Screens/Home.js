@@ -9,24 +9,20 @@ import {
   StatusBar,
 } from 'react-native';
 
-
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Colors from '../Styles/Colors';
 
-import { Container, Content, Header, Left, Right, Icon } from 'native-base';
+//import { Container, Content, Header, Left, Right, Icon } from 'native-base';
 
 export default class Home extends Component {
   render() {
     return (
-    <Container>
-      <Header>
-        <Right>
-          <Icon name="md-menu" onPress={()=> this.props.navigation.navigate('DrawerOpen')}
-          style={{color: 'white', marginRight: 375}} />
-        </Right>
-      </Header>
 
       <View style ={styles.container}>
+      <StatusBar
+      backgroundColor={Colors.ColorStatubar}
+      animated={true}
+      />
       <View style ={styles.quadroLogin}>
 
        <View style={styles.topoPainel}>
@@ -47,9 +43,9 @@ export default class Home extends Component {
           </TouchableOpacity>
         </View>
 
-          </View>
-         </View>
-      </Container>
+      </View>
+  </View>
+
     );
   }
 }

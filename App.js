@@ -4,31 +4,19 @@ import {
   Platform,
   StyleSheet,
 } from 'react-native';
-import Login from './src/Screens/Login';
-import LoginFor from './src/Screens/LoginFor';
-import Home from './src/Screens/Home';
-import Pedidos from './src/Screens/Pedidos';
 
-import { DrawerNavigator} from 'react-navigation'
+import StackScreen from './src/Navigations/StackNav'
+import DrawerScreen from './src/Navigations/DrawerNav'
+
+
 
 export default class App extends Component {
   render() {
     return (
-      <MyApp/>
+      <StackScreen />
     );
   }
 }
-const MyApp = DrawerNavigator({
-  Login:{
-    screen: Login
-  },
-  Home:{
-    screen: Home
-  },
-  Pedidos: {
-    screen: Pedidos
-  }
-})
 
 const styles = StyleSheet.create({
   container: {
