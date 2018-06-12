@@ -26,8 +26,11 @@ export default class Home extends Component {
       <View style ={styles.quadroLogin}>
 
        <View style={styles.topoPainel}>
-       <TouchableOpacity  style={styles.btnPedidos} onPress={()=> this.props.navigation.navigate('Pedidos')}>
+       <TouchableOpacity  style={styles.btnPedidos}
+       onPress={()=> this.props.navigation.navigate('SelecionarPedido')}>
+
           <Text style={styles.textTopoPainel}>Faça seu Pedido </Text>
+
           <FontAwesome
               name="cart-arrow-down"
               size={30}

@@ -12,7 +12,12 @@ import Colors from '../Styles/Colors';
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
-export default class Login extends Component {
+ class Login extends Component {
+
+static navigationOptions={
+  header: null
+}
+
 handleNexbtn(){
   alert('Cadastro');
 }
@@ -93,6 +98,8 @@ animated={true}
     );
   }
 }
+export default Login;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,

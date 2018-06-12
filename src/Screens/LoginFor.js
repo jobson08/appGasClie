@@ -15,7 +15,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Colors from '../Styles/Colors';
 
 
-export default class LoginFor extends Component {
+class LoginFor extends Component {
   buttonEntar() {
   alert('entar com email');
 }
@@ -33,6 +33,7 @@ export default class LoginFor extends Component {
         </View>
 
            <Text style={styles.textoTela}>Entre com o seu Login</Text>
+
             <TextInput
              style={styles.input} underlineColorAndroid='rgba(0,0,0,0)'
              placeholder="E-mail"
@@ -42,6 +43,11 @@ export default class LoginFor extends Component {
              style={styles.input}
              placeholder="Senha"
             />
+
+            <TextInput
+              style={styles.input}
+              placeholder="Confirma Senha"
+             />
 
       <TouchableOpacity
           style={styles.buttonEsq}
@@ -60,6 +66,9 @@ export default class LoginFor extends Component {
     );
   }
 }
+
+export default LoginFor;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -7,14 +7,16 @@ import {
   StyleSheet,
 } from 'react-native';
 
-export default class TelaInicial extends Component {
-  static navigationOptions={
-    header: null
-  }
+export default class MenuDetalhe extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>m the MyComponent component</Text>
+
+          <View>
+            <Text>Ola usuario</Text>
+          </View>
+
+        
       </View>
     );
   }

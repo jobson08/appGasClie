@@ -9,7 +9,7 @@ import Colors from '../Styles/Colors';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Container, Content, Header, Left, Right, Icon } from 'native-base';
 
-export default class ForPagamento extends Component {
+class ForPagamento extends Component {
   render() {
     return (
       <Container>
@@ -29,7 +29,7 @@ export default class ForPagamento extends Component {
     );
   }
 }
-
+export default ForPagamento;
 const styles = StyleSheet.create({
   container: {
     flex: 1,

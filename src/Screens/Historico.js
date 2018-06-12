@@ -11,7 +11,7 @@ import Colors from '../Styles/Colors';
 //import FontAwesome from 'react-native-vector-icons/FontAwesome';
 ///import { Container, Content, Header, Left, Right, Icon } from 'native-base';
 
-class Pedidos extends Component {
+export default class Histotico extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -19,13 +19,12 @@ class Pedidos extends Component {
       backgroundColor={Colors.ColorStatubar}
       animated={true}
       />
-          <Text>Pedidos</Text>
+          <Text>Histotico</Text>
       </View>
     );
   }
 }
 
-export default Pedidos;
 
 const styles = StyleSheet.create({
   container: {
